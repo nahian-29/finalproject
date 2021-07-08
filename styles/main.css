@@ -17,11 +17,44 @@ main h1{
     box-shadow: 3px 3px 3px 3px black;
     text-indent: 45px;
 }
-.navbar .navbar-nav {
-    position: relative;
-    float: none;
-    text-align: center;
-    margin: auto;
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+	width: 20%;
+}
+#nav_menu ul li a {
+	display: block;
+	text-align: center;
+	padding: 1em 0;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+#nav_menu a.current {
+	color: yellow;
+}
+#nav_menu ul ul {
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
 }
 .form-inline{
     position: relative;
